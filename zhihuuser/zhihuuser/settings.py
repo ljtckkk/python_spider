@@ -67,6 +67,8 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'zhihuuser.pipelines.MongoPipeline': 300,
+   'scrapy_redis.pipelines.RedisPipeline': 301,
+
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -93,3 +95,13 @@ ITEM_PIPELINES = {
 # 数据库信息
 MONGO_URI = 'mongodb://localhost:27017'
 MONGO_DB = 'zhihu'
+
+# 使用scrapy_redis的调度器
+SCHEDULER = "scrapy_redis.scheduler.Scheduler"
+
+# scrapy-redis去重类
+DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
+
+# redis数据库连接地址
+REDIS_URL = 'redis://root:YUting@123@192.168.10.111:6379'
+
