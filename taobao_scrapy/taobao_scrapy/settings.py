@@ -91,8 +91,8 @@ ITEM_PIPELINES = {
 
 # 微博账号密码
 SELENIUM_TIMEOUT = 10
-WEIBO_USERNAME = 'jsjsboy@sina.com'
-WEIBO_PASSWORD = 'liujun520'
+WEIBO_USERNAME = '请输入你的账号'
+WEIBO_PASSWORD = '请输入你的密码'
 
 # 关键字、页数
 KEYWORDS = ['iPad']
