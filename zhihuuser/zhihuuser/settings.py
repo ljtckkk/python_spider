@@ -67,7 +67,6 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'zhihuuser.pipelines.MongoPipeline': 300,
-   'scrapy_redis.pipelines.RedisPipeline': 301,
 
 }
 
