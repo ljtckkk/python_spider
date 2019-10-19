@@ -96,12 +96,4 @@ ITEM_PIPELINES = {
 MONGO_URI = 'mongodb://192.168.10.111:27017'
 MONGO_DB = 'zhihu'
 
-# 使用scrapy_redis的调度器
-SCHEDULER = "scrapy_redis.scheduler.Scheduler"
-
-# scrapy-redis去重类
-DUPEFILTER_CLASS = "scrapy_redis.dupefilter.RFPDupeFilter"
-
-# redis数据库连接地址
-REDIS_URL = 'redis://root:YUting@123@192.168.10.111:6379'
 
