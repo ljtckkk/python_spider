@@ -27,8 +27,8 @@ browser.get(url)
 '#' 表示id； div:nth-child(2)表示查找nth-child父元素的第2个子元素，即div标签下的第2个子标签。
 '''
 
-username = 'jsjsboy@sina.com'
-password = 'liujun520'
+username = '请输入你的账号'
+password = '请输入你的密码'
 
 
 def login_taobao():
