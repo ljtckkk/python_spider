@@ -93,7 +93,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # 数据库信息
-MONGO_URI = 'mongodb://localhost:27017'
+MONGO_URI = 'mongodb://192.168.10.111:27017'
 MONGO_DB = 'zhihu'
 
 # 使用scrapy_redis的调度器
