@@ -10,7 +10,7 @@
 
 参考settings中的配置:
 
-# 使用scrapy_redis的调度器
+使用scrapy_redis_bloomfilter的调度器
 
 `SCHEDULER = "scrapy_redis_bloomfilter.scheduler.Scheduler"`
 
