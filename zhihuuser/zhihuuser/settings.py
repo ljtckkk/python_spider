@@ -42,7 +42,7 @@ ROBOTSTXT_OBEY = False
 DEFAULT_REQUEST_HEADERS = {
   'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
   'Accept-Language': 'en',
-  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/76.0.3809.132 Safari/537.36'
+  'User-Agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36'
 }
 
 # Enable or disable spider middlewares
@@ -67,7 +67,7 @@ DOWNLOADER_MIDDLEWARES = {
 # See https://doc.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
    'zhihuuser.pipelines.MongoPipeline': 300,
-
+   # 'scrapy_redis.pipelines.RedisPipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
@@ -95,4 +95,18 @@ ITEM_PIPELINES = {
 MONGO_URI = 'mongodb://192.168.10.111:27017'
 MONGO_DB = 'zhihu'
 
+# 使用scrapy_redis的调度器
+SCHEDULER = "scrapy_redis_bloomfilter.scheduler.Scheduler"
 
+# 去重类，已修改为布隆去重
+DUPEFILTER_CLASS = "scrapy_redis_bloomfilter.dupefilter.RFPDupeFilter"
+# 哈希函数的个数，默认为 7，可以自行修改
+BLOOMFILTER_HASH_NUMBER = 7
+# BloomFilter 的 bit 参数，默认 31，占用 256MB 空间，去重量级 1 亿
+BLOOMFILTER_BIT = 31
+
+# redis数据库连接地址
+REDIS_URL = 'redis://root:YUting@123@192.168.10.111:6379/1'
+
+# 是否在关闭时候保留原来的调度器和去重记录，True=保留，False=清空
+SCHEDULER_PERSIST = False

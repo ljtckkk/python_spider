@@ -14,7 +14,7 @@ class ZhihuSpider(scrapy.Spider):
     allowed_domains = ['www.zhihu.com']
 
     start_urls = ['http://www.zhihu.com/']
-    start_user = 'lucky-60-21'
+    start_user = 'excited-vczh'
 
     # 用户详细信息url
     user_url = 'https://www.zhihu.com/api/v4/members/{user}?include={include}'
