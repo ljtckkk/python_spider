@@ -92,8 +92,9 @@ ITEM_PIPELINES = {
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
 
 # 数据库信息
-MONGO_URI = 'mongodb://192.168.10.111:27017'
+MONGO_URL = 'mongodb://admin:yuting123@49.235.93.254:27017/'
 MONGO_DB = 'zhihu'
+MONGODB_COLLECTION = 'User'
 
 # 使用scrapy_redis的调度器
 SCHEDULER = "scrapy_redis_bloomfilter.scheduler.Scheduler"
@@ -106,7 +107,7 @@ BLOOMFILTER_HASH_NUMBER = 7
 BLOOMFILTER_BIT = 31
 
 # redis数据库连接地址
-REDIS_URL = 'redis://root:YUting@123@192.168.10.111:6379/1'
+REDIS_URL = 'redis://root:YUting@123@49.235.93.254:6379/'
 
 # 是否在关闭时候保留原来的调度器和去重记录，True=保留，False=清空
 SCHEDULER_PERSIST = False
